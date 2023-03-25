@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+body{
+background-color: black;
+}
+.btn{
+    width:10rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: goldenrod;
+    border: none;
+    cursor: pointer;
+    transition: all .2s linear;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+.btn:hover{
+ transform: scale(1.1);
+}
+.golden-p{
+    color:goldenrod;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.h2-head{
+    color: #fff;
+    font-size:3rem;
+    text-transform: capitalize;
+}
+.comment-img{
+    width: 10%;
+}
+.client-name{
+    text-align: end;
+    color:#fff;
+    text-transform: capitalize;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    color:aliceblue;
+    padding: 0 6%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+.data-container{
+    display: flex;
+}
+.data-div{
+    margin:1rem;
+    padding:2%;
+    background-color: #222;
+    transition: all .3s ease;
+    border-radius: 5px;
+    height: 70%;
+
+}
+.data-div h5{
+    font-size: 1.4rem;
+    margin:0.5rem;
+}
+.data-div p{
+    line-height:2rem;
+    color:rgba(255,255,255,0.7)
+}
+.data-div:hover{
+    transform:translateY(-10px);
+}
+@media screen and (max-width:1000px){
+    .data-container{
+        display:block;
+    }
+}
+.top-element,.read-btn{
+    text-align: center;
+}
+#client-background{
+    background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,1)),url(https://images.unsplash.com/photo-1554679665-f5537f187268?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+    background-attachment: fixed;
+}
+.client-comment{
+    transform: rotateZ(5deg);
+}
+.client-comment:hover{
+    transform: rotateZ(0deg);
+}
+@media  screen and (max-width:1100) {
+    .container{
+        
+    }
+#client-background{
+    background-image: none;
+}
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

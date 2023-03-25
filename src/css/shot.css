@@ -1,0 +1,62 @@
+.right-element{
+    margin-top: 10%;
+    text-align: end;
+}
+.img{ 
+    width: 100%;
+    object-fit:cover;
+    height:100%;
+    object-position: center;
+    transition: all 0.3s ease-in;
+    filter:grayscale(100%);
+}
+#shot{
+    height:150vh;
+}
+.shots-container{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns:repeat(4,25%);
+    grid-template-rows:25% 25% 25%;
+    grid-template-areas: 
+        'i5 i6 i6 i2'
+        'i1 i1 i1 i1'
+}
+.img:hover{
+    transform: scale(1.1);
+    filter:grayscale(0);
+}
+.img1{
+    grid-area: i1;
+    overflow: hidden;
+}
+.img2{
+    grid-area: i2;
+    overflow: hidden;
+}
+.img5{
+    grid-area: i5;
+    overflow: hidden;
+}
+.img6{
+    grid-area: i6;
+    overflow: hidden;
+}
+
+@media screen and (max-width:1000px) {
+    #shot{
+        height:auto;
+    }
+    .shots-container{
+        grid-gap: 1rem;
+        grid-template-columns:1fr;
+        grid-auto-rows:300px;
+        grid-template-areas:
+        "i5"
+        "i2"
+        'i6'
+        'i1' 
+        ;
+    } 
+}
+
